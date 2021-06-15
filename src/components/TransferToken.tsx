@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import {Input} from 'baseui/input';
+import { Input } from 'baseui/input';
 import { Button } from 'baseui/button';
 import {styled, useStyletron} from 'baseui';
-import {FlexGridItem} from 'baseui/flex-grid';
 
 const Label = styled('label', {
   width: "200px"
@@ -18,7 +17,7 @@ function TransferToken(props) {
     }
   
     return (
-      <FlexGridItem>
+      <div>
         <h3>Transfer Token</h3>
         <div>
           <div className={css({display: "flex", margin: "1rem 0"})}>
@@ -53,7 +52,7 @@ function TransferToken(props) {
           </div>
           <Button onClick={onSubmit}>Send</Button>
         </div>
-      </FlexGridItem>
+      </div>
     )
   }
   

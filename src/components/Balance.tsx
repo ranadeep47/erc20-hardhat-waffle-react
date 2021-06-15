@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import {Input} from 'baseui/input';
 import { Button } from 'baseui/button';
 import {styled, useStyletron} from 'baseui';
-import {FlexGridItem} from 'baseui/flex-grid';
 
 const Label = styled('label', {
   width: "200px"
@@ -17,7 +16,7 @@ function Balance(props) {
     }
   
     return (
-      <FlexGridItem>
+      <div>
         <h3>Get Balance Of</h3>
         <div>
             <div className={css({display: "flex", margin: "1rem 0"})}>
@@ -38,7 +37,7 @@ function Balance(props) {
             <p>Balance: {props.balance}</p>
             <Button onClick={onSubmit}>Get Balance</Button>
         </div>
-      </FlexGridItem>
+      </div>
     )
   }
   

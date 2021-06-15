@@ -5,9 +5,7 @@ import { ethers } from 'ethers';
 import { Button } from 'baseui/button';
 import { Spinner } from "baseui/spinner";
 import {styled, useStyletron} from 'baseui';
-import {FlexGrid, FlexGridItem} from 'baseui/flex-grid';
 
-import {BlockProps} from 'baseui/block';
 
 import TokenTransfer from './components/TransferToken'
 import Allowance from './components/Allowance'
@@ -100,7 +98,7 @@ function App(props) {
             <p>📨 Contract Address: {contract.address}</p>
             <p>📨 User Address: {account}</p>     
             <p>💰 User Balance: {balance}</p> 
-            <FlexGrid
+            <div
               flexGridColumnCount={2}
               flexGridColumnGap="scale800"
               flexGridRowGap="scale800">
@@ -109,7 +107,7 @@ function App(props) {
               <Allowance onRequestAllowance={fetchAllowance} allowance={allowance} />
               <Balance onRequestBalance={fetchBalance} balance={accountBalance}/>
               <TransferFrom onTransferFromRequest={transferFrom} />
-            </FlexGrid>
+            </div>
           </>
         }
       </Container>

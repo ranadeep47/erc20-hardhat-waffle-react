@@ -21,6 +21,12 @@ const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
   solidity: "0.8.0",
+  paths: {
+    tests: "./test",
+    sources: "./contracts",
+    cache: "./cache",
+    artifacts: "./src/artifacts"
+  },
   networks: {
     hardhat: {
       chainId: 1337 // TO WORK WITH METAMASK
