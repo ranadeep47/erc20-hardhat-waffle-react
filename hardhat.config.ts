@@ -1,9 +1,8 @@
-import { config as dotEnvConfig } from "dotenv";
-dotEnvConfig();
-
 // hardhat.config.ts
 import { HardhatUserConfig } from "hardhat/types";
 import { task } from "hardhat/config";
+import { config as dotEnvConfig } from "dotenv";
+dotEnvConfig();
 
 import '@typechain/hardhat';
 import '@nomiclabs/hardhat-ethers';
@@ -21,9 +20,11 @@ const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
-  solidity: "0.7.3",
+  solidity: "0.8.0",
   networks: {
-    hardhat: {},
+    hardhat: {
+      chainId: 1337 // TO WORK WITH METAMASK
+    },
     localhost: {},
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${INFURA_API_KEY}`,
