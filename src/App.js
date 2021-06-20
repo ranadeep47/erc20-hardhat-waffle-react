@@ -22,8 +22,7 @@ const Container = styled('div', {
   flexDirection: "column",
 })
 
-const tokenAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
-const tokenDecimals = 1e+18;
+const tokenAddress = "0xCB1B15E3d881E7F9Bc05a7eFc61efE9661C112cb"
 const DECIMALS = 18;
 
 function App(props) {
